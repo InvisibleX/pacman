@@ -1,0 +1,163 @@
+package exemplos;
+
+
+import api.FX_CG_2D_API;
+import api.FX_CG_2D_API.Estilo;
+import javafx.application.Application;
+import javafx.geometry.Rectangle2D;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+
+public class uahsuhsua extends Application{
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
+	
+	public void start(Stage cena){						
+		final int largura = 600, altura = 600, fps = 100;
+        final String nomeJogo = "Exemplo!!!";
+        
+        // Criação do jogo
+        FX_CG_2D_API jogo = new FX_CG_2D_API(fps, largura, altura) {		        	
+
+        	// Método que desenha os objetos do jogo. Chamado continuamente.
+			@Override
+			public void desenhar() {
+				contorno(Color.BLACK);
+				retangulo(40,40,520,370,Estilo.PREENCHIDO);
+				//CENÁRIO BASE
+				contorno(3,Color.BLUE);
+				retangulo(45, 45, 510, 360, Estilo.LINHAS);
+				contorno(Color.BLUE);
+				retangulo(50, 50, 500, 350, Estilo.LINHAS);
+				
+				//#####################
+				
+				
+				
+				//OBSTÁCULOS 1
+				contorno(3,Color.BLUE);
+				retangulo(100, 80, 7, 90, Estilo.LINHAS);
+				retangulo(100, 80, 60, 7, Estilo.LINHAS);
+				
+				//OBSTÁCULOS 2
+				contorno(3,Color.BLUE);
+				retangulo(100, 240, 7, 110, Estilo.LINHAS);
+				retangulo(100, 343, 60, 7, Estilo.LINHAS);
+				
+				//OBSTÁCULOS 10
+				contorno(3,Color.BLUE);
+				retangulo(500, 80, 7, 110, Estilo.LINHAS);
+				retangulo(447, 80, 60, 7, Estilo.LINHAS);
+				
+				//OBSTÁCULOS 11
+				contorno(3,Color.BLUE);
+				retangulo(500, 240, 7, 110, Estilo.LINHAS);
+				retangulo(447, 343, 60, 7, Estilo.LINHAS);
+				
+
+				
+				
+				
+				
+				//OBSTÁCULOS 5
+				contorno(3,Color.BLUE);
+				retangulo(225, 100, 150, 7, Estilo.LINHAS);
+				
+				//OBSTÁCULO 7
+				contorno(3,Color.BLUE);
+				retangulo(225, 250, 150, 7, Estilo.LINHAS);
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			/*	
+				
+				//OBSTÁCULOS
+				contorno(3,Color.BLUE);
+				retangulo(225, 100, 150, 7, Estilo.LINHAS);
+				
+				//OBSTÁCULO
+				contorno(3,Color.BLUE);
+				retangulo(225, 250, 150, 7, Estilo.LINHAS);
+				
+				
+				
+				
+				
+				
+				
+				//OBSTÁCULO
+				contorno(3,Color.BLUE);
+				retangulo(150, 50, 7, 50, Estilo.LINHAS);
+				
+				//OBSTÁCULO
+				contorno(3,Color.BLUE);
+				retangulo(445, 50, 7, 50, Estilo.LINHAS);
+				
+				//OBSTÁCULO
+				contorno(3,Color.BLUE);
+				retangulo(445, 250, 7, 50, Estilo.LINHAS);
+				
+				//OBSTÁCULO
+				contorno(3,Color.BLUE);
+				retangulo(150, 250, 7, 50, Estilo.LINHAS);
+				
+				//OBSTÁCULO
+				contorno(3,Color.BLUE);
+				retangulo(225, 180, 7, 69, Estilo.LINHAS);
+				
+				//OBSTÁCULO
+				contorno(3,Color.BLUE);
+				retangulo(368, 180, 7, 69, Estilo.LINHAS);
+				
+				
+				
+				*/
+               
+	           
+	            
+	            
+			}
+
+            // Método chamado continuamente no loop do jogo. 
+			// Usado pra atualizar valores e fazer cálculos de posições, etc...
+			@Override
+			public void atualizar() { }
+			
+			@Override
+			public void movimentoDoMouse(MouseEvent e) { }
+			
+			@Override
+			public void cliqueDoMouse(MouseEvent e) { }
+			
+			@Override
+			public void teclaDigitada(KeyEvent e) {	}
+			
+			@Override
+			public void teclaLiberada(KeyEvent e) {	}
+			
+			@Override
+			public void teclaPressionada(KeyEvent e) { }
+			
+		};
+			    
+		// Inicia o jogo
+		jogo.iniciar(cena, nomeJogo);
+	}	    
+
+}
